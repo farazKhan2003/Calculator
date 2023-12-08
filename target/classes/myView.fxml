@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@myView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rhul.cs2800.GuiView">
+   <children>
+      <RadioButton fx:id="infixButton" layoutX="72.0" layoutY="312.0" mnemonicParsing="false" text="Infix">
+         <toggleGroup>
+            <ToggleGroup fx:id="expressionType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="postfixButton" layoutX="433.0" layoutY="312.0" mnemonicParsing="false" text="Postfix" toggleGroup="$expressionType" />
+      <TextField fx:id="expressionField" layoutX="226.0" layoutY="175.0" />
+      <Label layoutX="164.0" layoutY="179.0" text="Expression" />
+      <Label layoutX="185.0" layoutY="237.0" text="Result:" />
+      <Button fx:id="calculateButton" layoutX="249.0" layoutY="93.0" mnemonicParsing="false" onAction="#calculateExpression" style="-fx-background-color: #00ff00;" text="Calculate!" />
+      <Button fx:id="resetButton" layoutX="260.0" layoutY="308.0" mnemonicParsing="false" onAction="#resetPressed" text="Reset" />
+      <Label fx:id="resultField" layoutX="235.0" layoutY="237.0" />
+   </children>
+</Pane>
